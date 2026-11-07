@@ -8,40 +8,36 @@
             background-color: #000040; /*背景深蓝*/
             color: #ffffff;
             background-image: url("bj.png");
-            /* 图片铺满屏幕，不重复 */
             background-size: cover;
-            /* 图片居中显示 */
             background-position: center;
-            /* 禁止图片重复平铺 */
             background-repeat: no-repeat;
-            /* 固定背景，滚动页面不会跟着动 */
             background-attachment: fixed;
-            /* 让页面占满全屏高度 */
             min-height: 100vh;
             margin: 0;
+            padding-bottom: 70px;
         }
         h1 {
             color: cyan;
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         h2 {
             color: #ffff00;
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         h3 {
             color: #ffffff;
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         h4 {
             color: #ff2222;
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         p {
             color: #ffffff;
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         a {
-            text-align: center; /*文字居中*/
+            text-align: center;
         }
         a img {
             border: none;
@@ -55,16 +51,35 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 60px;  /*调高高度放下两行文字，可以按需增减*/
+            height: 60px;
             background-color: #202020;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /*垂直排列，支持<br>换行*/
-            gap: 6px; /*两行文字之间的间距*/
+            flex-direction: column;
+            gap: 6px;
             color: #cccccc;
             font-size: 16px;
             z-index: 999;
+        }
+        /* 下拉框样式，适配深色主题 */
+        .select-box{
+            background:#202020;
+            color:#fff;
+            border:1px solid cyan;
+            padding:6px;
+            border-radius:4px;
+        }
+        .ok-btn{
+            background:#00a2e8;
+            color:#fff;
+            border:1px solid cyan;
+            padding:6px 12px;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        .ok-btn:hover{
+            background:#39b8e8;
         }
     </style>
 </head>
@@ -85,7 +100,7 @@
     <a href="https://wgh666.lanzoum.com/ixVXE4ef38qb" target="_blank">
         <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
     </a>
-    <p>下载密码：1234</p>
+    <p>如果下载时提示需要密码，请输入1234</p>
     <p>________________________________________________________________</p>
     <h3>bat批处理病毒</h3>
     <img src="bat.png" width="200" style="color: #ffffff;" alt="bat批处理病毒_图片">
@@ -140,12 +155,16 @@
     <p>稳定不卡顿，支持低端设备</p>
     <img src="MC_2D.png" width="200" style="color: #ffffff;" alt="我的世界2D版_图片">
     <br>
-    <a href="https://wgh666.lanzouu.com/iGHMN42woqod" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <br>
+    <div style="text-align:center;">
+        <select id="verSelect" class="select-box">
+            <option value="exe">下载exe应用程序版（更稳定）</option>
+            <option value="html">下载HTML网页版（更方便）</option>
+        </select>
+        <button class="ok-btn" onclick="goDownload()">点击下载</button>
+    </div>
+    <p>如果下载时提示需要密码，请输入1234</p>
     <a href="mc-2D.html" target="_blank">
-        <img src="play.png" width="150" style="color: #00ff00;" alt="直接游玩（需要联网）">
+        <img src="play.png" width="150" style="color: #00ff00;" alt="直接游玩（加载较慢）">
     </a>
     <p>________________________________________________________________</p>
     <h3>Minecraft 26.2</h3>
@@ -154,8 +173,20 @@
     <img src="MC_26.2.png" width="200" style="color: #ffffff;" alt="Minecraft_图片">
     <h4>由于技术原因，暂时无法下载</h4>
     <img src="NO_Download.png" width="150" style="color: #888888;" alt="无法下载">
-    
-    <br>
+
+    <script>
+        function goDownload(){
+            const sel = document.getElementById("verSelect").value;
+            let url;
+            if(sel === "exe"){
+                url = "https://wgh666.lanzouu.com/iGHMN42woqod";
+            }else{
+                url = "https://wgh666.lanzoum.com/iVixk4f2c9ud";
+            }
+            window.open(url,"_blank");
+        }
+    </script>
+
     <br>
     <br>
     <div class="footer-bar">
