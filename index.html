@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WGH的下载站</title>
     <style>
         body {
@@ -14,7 +15,17 @@
             background-attachment: fixed;
             min-height: 100vh;
             margin: 0;
-            padding-bottom: 70px;
+            padding: 40px 15px 80px;
+        }
+        /*黑色半透明容器*/
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: rgba(16, 16, 16, 0.6);
+            border: 1px solid cyan;
+            border-radius: 14px;
+            padding: 30px 25px;
+            box-shadow: 0 0 24px #00ffff44;
         }
         h1 {
             color: cyan;
@@ -84,95 +95,98 @@
     </style>
 </head>
 <body>
-    <h1>WGH的下载站</h1>
-    <hr>
-    <h2>----------------------------病毒区----------------------------</h2>
-    <h3>年猪病毒</h3>
-    <img src="NZBD.png" width="200" style="color: #ffffff;" alt="年猪病毒_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/iG4Wd3y7hx8d" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>蒋介石病毒</h3>
-    <img src="JJSBD.png" width="200" style="color: #ffffff;" alt="蒋介石病毒_图片">
-    <br>
-    <a href="https://wgh666.lanzoum.com/ixVXE4ef38qb" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>如果下载时提示需要密码，请输入1234</p>
-    <p>________________________________________________________________</p>
-    <h3>bat批处理病毒</h3>
-    <img src="bat.png" width="200" style="color: #ffffff;" alt="bat批处理病毒_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/i8sCt3xkbdwd" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>Error408病毒</h3>
-    <p>※此病毒可能无法在Windows7系统正常运行</p>
-    <img src="Error408.png" width="200" style="color: #ffffff;" alt="Error408_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/iaMhP3xuetlg" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>MEMZ（彩虹猫病毒）</h3>
-    <p>※运行此病毒会对电脑造成不可逆的严重危害！</p>
-    <img src="MEMZ.gif" width="200" style="color: #ffffff;" alt="MEMZ病毒_图片">
-    <br>
-    <a href="warning.html" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>年猪霸屏</h3>
-    <img src="NZBP.png" width="200" style="color: #ffffff;" alt="年猪霸屏_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/iIJJk41zi4cf" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <br>
-    <hr>
-    <h2>----------------------------游戏区----------------------------</h2>
-    <h3>植物大战僵尸杂交版v2.5</h3>
-    <p>※此链接不是正版下载链接，正版链接请前往<a href="https://pvzgame.net" target="_blank" style="color: cyan;">植物大战僵尸杂交版官网</a></p>
-    <img src="PvZ_2.5.png" width="200" style="color: #ffffff;" alt="植物大战僵尸杂交版_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/iQa4R3y0936b" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>PCL启动器</h3>
-    <p>可以用来玩MC</p>
-    <p>※可能无法在Windows10以下系统正常启动游戏</p>
-    <img src="PCL.png" width="200" style="color: #ffffff;" alt="PCL启动器_图片">
-    <br>
-    <a href="https://wgh666.lanzouu.com/iRidI41z3n6d" target="_blank">
-        <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>我的世界2D版</h3>
-    <p>稳定不卡顿，支持低端设备</p>
-    <img src="MC_2D.png" width="200" style="color: #ffffff;" alt="我的世界2D版_图片">
-    <br>
-    <div style="text-align:center;">
-        <select id="verSelect" class="select-box">
-            <option value="exe">下载exe应用程序版（更稳定）</option>
-            <option value="html">下载HTML网页版（更方便）</option>
-        </select>
-        <button class="ok-btn" onclick="goDownload()">点击下载</button>
+    <div class="container">
+        <h1>WGH的下载站</h1>
+        <hr>
+        <h2>----------------------------病毒区----------------------------</h2>
+        <h3>年猪病毒</h3>
+        <img src="NZBD.png" width="200" style="color: #ffffff;" alt="年猪病毒_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/iG4Wd3y7hx8d" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>蒋介石病毒</h3>
+        <img src="JJSBD.png" width="200" style="color: #ffffff;" alt="蒋介石病毒_图片">
+        <br>
+        <a href="https://wgh666.lanzoum.com/ixVXE4ef38qb" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>如果下载时提示需要密码，请输入1234</p>
+        <p>________________________________________________________________</p>
+        <h3>bat批处理病毒</h3>
+        <img src="bat.png" width="200" style="color: #ffffff;" alt="bat批处理病毒_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/i8sCt3xkbdwd" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>Error408病毒</h3>
+        <p>※此病毒可能无法在Windows7系统正常运行</p>
+        <img src="Error408.png" width="200" style="color: #ffffff;" alt="Error408_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/iaMhP3xuetlg" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>MEMZ（彩虹猫病毒）</h3>
+        <p>※运行此病毒会对电脑造成不可逆的严重危害！</p>
+        <img src="MEMZ.gif" width="200" style="color: #ffffff;" alt="MEMZ病毒_图片">
+        <br>
+        <a href="warning.html" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>年猪霸屏</h3>
+        <img src="NZBP.png" width="200" style="color: #ffffff;" alt="年猪霸屏_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/iIJJk41zi4cf" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <br>
+        <hr>
+        <h2>----------------------------游戏区----------------------------</h2>
+        <h3>植物大战僵尸杂交版v2.5</h3>
+        <p>※此链接不是正版下载链接，正版链接请前往<a href="https://pvzgame.net" target="_blank" style="color: cyan;">植物大战僵尸杂交版官网</a></p>
+        <img src="PvZ_2.5.png" width="200" style="color: #ffffff;" alt="植物大战僵尸杂交版_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/iQa4R3y0936b" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>PCL启动器</h3>
+        <p>可以用来玩MC</p>
+        <p>※可能无法在Windows10以下系统正常启动游戏</p>
+        <img src="PCL.png" width="200" style="color: #ffffff;" alt="PCL启动器_图片">
+        <br>
+        <a href="https://wgh666.lanzouu.com/iRidI41z3n6d" target="_blank">
+            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>我的世界2D版</h3>
+        <p>稳定不卡顿，支持低端设备</p>
+        <img src="MC_2D.png" width="200" style="color: #ffffff;" alt="我的世界2D版_图片">
+        <br>
+        <div style="text-align:center;">
+            <select id="verSelect" class="select-box">
+                <option value="exe">下载exe应用程序版（更稳定）</option>
+                <option value="html">下载HTML网页版（更方便）</option>
+                <option value="sb3">下载sb3源代码文件</option>
+            </select>
+            <button class="ok-btn" onclick="goDownload()">点击下载</button>
+        </div>
+        <p>如果下载时提示需要密码，请输入1234</p>
+        <a href="mc-2D.html" target="_blank">
+            <img src="play.png" width="150" style="color: #00ff00;" alt="直接游玩（加载较慢）">
+        </a>
+        <p>________________________________________________________________</p>
+        <h3>Minecraft 26.2</h3>
+        <p>正版Minecraft</p>
+        <p>※仅支持Windows10及以上系统</p>
+        <img src="MC_26.2.png" width="200" style="color: #ffffff;" alt="Minecraft_图片">
+        <h4>由于技术原因，暂时无法下载</h4>
+        <img src="NO_Download.png" width="150" style="color: #888888;" alt="无法下载">
     </div>
-    <p>如果下载时提示需要密码，请输入1234</p>
-    <a href="mc-2D.html" target="_blank">
-        <img src="play.png" width="150" style="color: #00ff00;" alt="直接游玩（加载较慢）">
-    </a>
-    <p>________________________________________________________________</p>
-    <h3>Minecraft 26.2</h3>
-    <p>正版Minecraft</p>
-    <p>※仅支持Windows10及以上系统</p>
-    <img src="MC_26.2.png" width="200" style="color: #ffffff;" alt="Minecraft_图片">
-    <h4>由于技术原因，暂时无法下载</h4>
-    <img src="NO_Download.png" width="150" style="color: #888888;" alt="无法下载">
 
     <script>
         function goDownload(){
@@ -180,18 +194,19 @@
             let url;
             if(sel === "exe"){
                 url = "https://wgh666.lanzouu.com/iGHMN42woqod";
-            }else{
+            }else if(sel === "html"){
                 url = "https://wgh666.lanzoum.com/iVixk4f2c9ud";
+            }else{
+                url = "https://wgh666.lanzoum.com/isCCK4f5t4ib";
             }
             window.open(url,"_blank");
         }
     </script>
 
     <br>
-    <br>
     <div class="footer-bar">
         <small>注：本站仅提供(.zip)格式压缩文件，下载后请自行解压！</small>
-        <small><a href="download-7zip.html" target="_blank" style="color: cyan;">没有解压工具？无法解压？</a>　　<a href="https://cn.bing.com/search?q=%E5%A6%82%E4%BD%95%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6&form=QBLH&sp=-1&lq=0&pq=%E5%A6%82%E4%BD%95%E8%A7%A3%E5%8E%8B%E6%96%87%E4%BB%B6&sc=12-6&qs=n&sk=&cvid=AEEBFA35A47E411E83AC5401EE6221AC" target="_blank" style="color: cyan;">不会解压？</a></small>
+        <small><a href="download-7zip.html" style="color: cyan;">没有解压工具？</a>　　　　<a href="unzip.html" style="color: cyan;">不会解压？</a></small>
     </div>
 </body>
 </html>

@@ -2,56 +2,133 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>下载7-zip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>下载解压工具——7-zip</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #000040;
+            color: #ffffff;
+            background-image: url("bj.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(16, 16, 16, 0.6);
+            border: 1px solid cyan;
+            border-radius: 14px;
+            padding: 40px 30px;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 0 24px #00ffff44;
+        }
         h1 {
+            color: cyan;
             text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+        .logo-img {
+            display: block;
+            margin: 0 auto 40px;
+            width: 200px;
+        }
+        .item-card {
+            background-color: #1b1b1b80;
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid #224488;
+            transition: 0.3s ease;
+            text-align: center;
+        }
+        .item-card:hover {
+            border-color: cyan;
+            box-shadow: 0 0 16px #0f0f0f33;
         }
         h2 {
-            color: #0000ff;
-            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        .sys-icon {
+            width: 80px;
+            margin-bottom:16px;
+        }
+        /* 真正的下载按钮样式 */
+        .download-btn {
+            background:#202020;
+            color:#fff;
+            border:1px solid cyan;
+            padding:10px 24px;
+            border-radius:6px;
+            font-size:16px;
+            cursor:pointer;
+            transition:0.25s;
+        }
+        .download-btn:hover {
+            background:#444;
+            box-shadow: 0 0 10px #00ffff55;
         }
         a {
-            display: block;
-            text-align: center; /*文字居中*/
+            text-decoration: none;
         }
-        a img {
-            border: none;
-        }
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-        .download-btn {
-            display: inline-block; /* 修改这里！ */
-            margin: 8px 0;
-        }
-        /* 再套一层容器实现居中 */
-        .wrap-center {
+        .back-wrap {
             text-align: center;
+            margin-top:30px;
         }
-            </style>
+        .back-btn {
+            display: inline-block;
+            padding:8px 16px;
+            background:#00a2e8;
+            color:#fff;
+            border:1px solid cyan;
+            border-radius:6px;
+            font-size:15px;
+            transition:0.25s;
+        }
+        .back-btn:hover{
+            background:#39b8e8;
+        }
+    </style>
 </head>
 <body>
-    <br>
-    <br>
-    <h1>下载解压工具——7-zip</h1>
-    <img src="7zip_logo.png" width="200" style="color: #000000;" alt="7-zip_图片">
-    <h2>32位版本（适用于Windows10以下系统）</h2>
-    <img src="Windows7.png" width="80" style="color: #000000;" alt="Windows7_图片">
-    <br>
-    <div class="wrap-center">
-        <a class="download-btn" href="7zip-x32_setup.exe" target="_blank">
-            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-        </a>
-    </div>
-    <h2>64位版本（适用于Windows10及以上系统）</h2>
-    <img src="Windows10.png" width="80" style="color: #000000;" alt="Windows10_图片">
-    <br>
-    <div class="wrap-center">
-        <a class="download-btn" href="7zip-x64_setup.exe" target="_blank">
-            <img src="Download.png" width="150" style="color: #0088ff;" alt="点击下载">
-        </a>
+    <div class="container">
+        <h1>下载解压工具——7-zip</h1>
+        <img class="logo-img" src="7zip_logo.png" alt="7-zip_图片">
+
+        <div class="item-card">
+            <h2>32位版本（适用于Windows10以下系统）</h2>
+            <img class="sys-icon" src="Windows7.png" alt="Windows7_图片">
+            <br><br>
+            <a href="7zip-x32_setup.exe" target="_blank">
+                <button class="download-btn">点击下载</button>
+            </a>
+        </div>
+
+        <div class="item-card">
+            <h2>64位版本（适用于Windows10及以上系统）</h2>
+            <img class="sys-icon" src="Windows10.png" alt="Windows10_图片">
+            <br><br>
+            <a href="7zip-x64_setup.exe" target="_blank">
+                <button class="download-btn">点击下载</button>
+            </a>
+        </div>
+
+        <div class="back-wrap">
+            <a href="index.html" class="back-btn">返回下载主页</a>
+        </div>
     </div>
 </body>
 </html>
